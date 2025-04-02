@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600&display=swap");
+
+:root{
+    --fonte-padrao: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+
+}
+
+body{
+    display: flex;  
+
+}
+
+.visual-direita{
+
+    position:fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    overflow: visible;
+    background-color: #2135A6;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    padding: 140px 68px 90px;
+    gap: 70px;
+}
+
+.logos{
+    width: 212px;
+    height: auto;
+   
+}
+
+.background
+{    
+    width: 500px;
+    height: auto;
+   
+}
+    
+
+.formulario {
+   
+    width: 50%;
+    padding: 3%; 
+    background-color: #FFFFFF;
+    border: 1px solid #ccc; 
+    font-family: var(--fonte-padrao);
+    
+   
+ 
+}
+.titulos{
+    display:flex;
+    flex-direction: column;
+   
+}
+
+
+
+h2 {
+  
+    font-weight: 600;
+    font-size: 24px;
+    color: #292524;  
+
+}
+
+h3{
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #57534E;
+
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    gap: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #57534E;
+
+}
+
+legend{
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #292524;
+
+}
+
+.grupo{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.icone-upload{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    padding: 24px 16px; 
+    border: 1px dashed #D6D3D1;
+    border-radius: 8px;
+    cursor:pointer;  
+
+}
+
+.texto{
+    font-weight: 400;
+    font-size: 16px;
+    color: #A8A29E;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    
+  
+}
+
+.icone{
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+
+}
+
+input[type="file"]{
+    display: none;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+.grupo-diferencial{
+    display: flex;
+    justify-content:space-between;
+    gap: 20px;
+   
+    
+}
+
+.grupo-menor{
+    width: 30%;
+}
+
+.grupo-maior{
+    width: 70%;
+}
+
+.trilha-icones {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.img-trilhas{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.trilhavisual{
+    border: 1px solid #D6D3D1;
+    border-radius: 8px;
+    padding: 32px 16px;
+    width: 256px;
+    height: 120px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    
+}
+
+.trilha-icones button img {
+    width: 40px; 
+}
+
+input, select {
+ 
+    width: 100%; 
+    height: 48px; 
+    border-radius: 8px; 
+    border: 1px solid #D6D3D1; 
+    padding: 12px 16px; 
+    font-size: 16px; 
+    font-family: var(--fonte-padrao);
+    font-weight: 400;
+    color: #292524;
+        
+}
+
+
+.butoes{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.butoes button{ 
+    border-radius: 8px; 
+    padding: 12px 24px;
+    font-weight: 500; 
+    font-size: 16px;
+   
+ 
+}
+
+.butoes .fazerinscricao{
+    background-color: #E43A12;
+    color: #FFFFFF;
+}
+
+.butoes .cancelar{
+    color:  #E43A12;
+    background-color: #FFFFFF;
+    border: 1px solid #E43A12;
+    
+}
+
+button:hover {
+    border: 2px solid #E43A12;
+}
+
+.termos{
+
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+   
+    
+    
+    
+}
+.texto-termos{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    
+    
+
+}
+
+.ok{
+    
+    color: red;
+    margin-right: 5px; 
+    margin-left: 5px; 
+    
+}
+
+.termos input[type="checkbox"]{
+    margin:0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+}
