@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tela_login">
+    <div class="parteSuperior">
+        <img class="faixa" src="elementos_login/elemento_decorativo_faixa.svg" alt="faixa_trilhas">
+        <img class="logo_trilhas" src="elementos_login/logo_trilhas.svg" alt="logo_trilhas">
+        <img class="faixa_inferior" src="elementos_login/elemento_decorativo_faixa_inferior.svg" alt="faixa_trilhas_inferior">
+        
+    </div>
+    <div class="parteInferior">
+        <div class="login_corpo_superior">
+            <h1 class="welcome">Seja Bem Vindo, Trilheiro!</h1>
+            <h2 class="welcome-sub">Estamos muito felizes por você estar aqui.</h2>
+        </div>
+        <div class="login_corpo">
+            <div class="inputs">
+                <div class='nomes_inputs'>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" autocomplete="email">
+                </div>
+                <div class='nomes_inputs'>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" autocomplete="current-password">
+                </div>
+            </div>
+            <div class="infos_adicionais">
+                <label class="conexao">
+                <input type="checkbox"  id="manter-conectado" required> Manter-me conectado</label>
+                <h2 class="esquecer_senha">Esqueceu sua senha?</h2>
+            </div>
+        </div>
+        <div class="login_corpo_inferior">
+            <button class='buton_entrar' type="button">Entrar</button>
+            <h2 class="registrar-se">Ainda não tem uma conta? 
+                <a href="./index.html" class="registro_link">Registre-se</a>
+            </h2>
+        </div>
+    </div> 
+</body>
+</html>
