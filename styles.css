@@ -424,4 +424,19 @@ input, select {
     cursor: pointer;
 
 }
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .visual-direita {
+        position: relative;
+        width: 100%;
+        height: auto;
+        order: -1; /* Faz com que a imagem vá para cima */
 
+    }
+    .formulario {
+        width: 100%;
+        padding: 16px;
+    }
+}
