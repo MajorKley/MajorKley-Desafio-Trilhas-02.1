@@ -440,3 +440,45 @@ input, select {
         padding: 16px;
     }
 }
+
+/*========= erros ==========*/
+
+.erro {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+.campo-invalido {
+    border: 1px solid red !important;
+}
+
+/* Para os campos de upload */
+.grupo-upload.campo-invalido .icone-upload {
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Estilo para área de trilhas com erro */
+.trilha-icones.campo-invalido {
+    border: 1px solid #ff5252 !important;
+    padding: 10px;
+    border-radius: 8px;
+}
+/* Para os termos */
+.termos.campo-invalido {
+    outline: 1px solid red;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Estilo para botão selecionado */
+.trilhavisual.selecionado {
+    background-color: #e0f7fa;
+    border: 2px solid  #2135A6 !important;
+    transform: scale(0.98);
+}
+
+
