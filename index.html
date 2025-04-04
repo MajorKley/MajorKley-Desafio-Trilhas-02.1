@@ -13,7 +13,7 @@
             <h3>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas</h3>
         </div>
  
-        <form id="inscricao-form">
+        <form id="inscricao-form" novalidate>
             <fieldset >
                 <div class= 'grupo'>
                     <legend>Informações do Participante</legend>
@@ -140,7 +140,25 @@
                 </div>
                 <input type="hidden" id="trilha-selecionada" name="trilha-selecionada">
             </fieldset>
+            
+            <fieldset>
+                <legend>Criação de Conta</legend>
+                <p class="separador">Agora, crie sua conta para acessar o sistema:</p>
+                <div class="grupo">
+                    <label for="userId">ID do Usuário:</label>
+                    <input type="text" id="userId" name="userId" required>
+                </div>
+            
+                <div class="grupo">
+                    <label for="password">Crie sua Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+             <p class="dica-credenciais"> Crie um ID fácil de lembrar (ex: maria2025). Sua senha deve ter pelo menos 6 caracteres.</p>
+            
+            </fieldset>
 
+    
+            
             <fieldset>
                 <label class="termos">
                     <input type="checkbox" required id="termos-checkbox" name="termos-checkbox" autocomplete="off" required>
