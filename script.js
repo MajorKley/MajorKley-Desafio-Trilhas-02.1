@@ -229,11 +229,13 @@ document.querySelectorAll('.trilhavisual').forEach(button => {
 
 // 2. Validação do CPF
 
-document.getElementById("inscricao-form").addEventListener("submit", function(event) {
-    var senha = document.getElementById("password").value;
-    if (senha.length < 6) {
-        alert("A senha deve ter pelo menos 6 caracteres!");
-        event.preventDefault(); // Bloqueia o envio do formulário
-    }
-});
+
+function gerarIdAutomatico() {
+    const data = Date.now(); // pega o timestamp atual
+    const aleatorio = Math.floor(Math.random() * 1000); // número entre 0 e 999
+    return `user-${data}-${aleatorio}`;
+}
+
+// Atribuir ao campo ID automaticamente
+document.getElementById("userId").value = gerarIdAutomatico();
 
