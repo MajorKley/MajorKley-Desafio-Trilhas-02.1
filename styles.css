@@ -521,7 +521,7 @@ input, select {
     text-align: left;  /* Alinha à esquerda */
     margin-left: 0;  /* Garante que fique no canto esquerdo */
   
-}    
+} 
 .dica-credenciais {
     font-size: 0.85rem;
     color: #555;

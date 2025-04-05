@@ -174,6 +174,30 @@ function validarFormulario() {
         removerErro(termosCheckbox.parentElement);
     }
 
+    if (formularioValido) {
+        // Monta um objeto com todos os dados válidos
+        const dadosFormulario = {
+            nome: document.getElementById('nome').value.trim(),
+            aniversario: document.getElementById('aniversario').value,
+            cpf: document.getElementById('cpf').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            telefone: document.getElementById('telefone').value.trim(),
+            iddocumento: document.getElementById('iddocumento').value,
+            cep: document.getElementById('cep').value.trim(),
+            rua: document.getElementById('rua').value.trim(),
+            numero: document.getElementById('numero').value.trim(),
+            cidade: document.getElementById('cidade').value.trim(),
+            estado: document.getElementById('estado').value.trim(),
+            residenciadocumento: document.getElementById('residenciadocumento').value,
+            trilha: document.getElementById('trilha-selecionada').value,
+            termos: document.getElementById('termos-checkbox').checked
+        };
+    
+        // Salva no LocalStorage (como string)
+        localStorage.setItem('dadosInscricao', JSON.stringify(dadosFormulario));
+    
+    }
+
     // Se tudo estiver válido
     if (formularioValido) {
         alert('Formulário válido! Pronto para enviar.');
@@ -227,6 +251,7 @@ document.querySelectorAll('.trilhavisual').forEach(button => {
     });
 });
 
+
 // 2. Validação do CPF
 
 
@@ -238,4 +263,3 @@ function gerarIdAutomatico() {
 
 // Atribuir ao campo ID automaticamente
 document.getElementById("userId").value = gerarIdAutomatico();
-
