@@ -50,15 +50,15 @@
                     <input type="tel" id="telefone" name="telefone" autocomplete="tel" required>
                 </div>
 
-                <div class= 'grupo-upload'>
+                <div class= 'grupo'>
                     <label for="iddocumento">
                         Documento de Identidade:
                         <div class="icone-upload">
                                 <img class='icone'src="icones/cloud-upload.svg" alt="Ícone de upload">
                                 <span class="texto">Clique aqui para<br> selecionar o arquivo</span>
-                    </label>
-                            <input type="file" id="iddocumento" name="iddocumento" required>
-                        </div>
+                                <input type="file" id="iddocumento" name="iddocumento" required>
+                        </div>         
+                    </label>       
                 </div>
                     
                 
@@ -70,7 +70,7 @@
                 <div class= 'grupo'>
                     <label for="cep">CEP:</label>
                     <input type="text" id="cep" name="cep" autocomplete="postal-code" required>
-                </div>
+                
                 <div class="grupo-diferencial">
                     <div class= 'grupo-maior'>
                         <label for="rua">Rua:</label>
@@ -95,16 +95,17 @@
                 </div>
                    
                 </div>
+            </div>
 
-                <div class= 'grupo-upload'>
+                <div class= 'grupo'>
                     <label for="residenciadocumento">
                         Comprovante de Residência:
                         <div class="icone-upload">
                                 <img class='icone'src="icones/cloud-upload.svg" alt="Ícone de upload">
                                 <span class="texto">Clique aqui para<br> selecionar o arquivo</span>
-                    </label>
-                            <input type="file" id="residenciadocumento" name="residenciadocumento" required>
+                                <input type="file" id="residenciadocumento" name="residenciadocumento" required>
                         </div>
+                    </label>            
                 </div>
             </fieldset>
 
@@ -143,18 +144,19 @@
             
             <fieldset>
                 <legend>Criação de Conta</legend>
-                <p class="separador">Agora, crie sua conta para acessar o sistema:</p>
+                <p class="instrucao">Agora, crie sua conta para acessar o sistema:</p>
                 <div class="grupo">
                     <label for="userId">ID do Usuário:</label>
+                    <p class="dica-credenciais"> Crie um ID fácil de lembrar (ex: maria2025). Sua senha deve ter pelo menos 6 caracteres.</p>
                     <input type="text" id="userId" name="userId" required>
+                    <div class="erro" id="erro-userId"></div>
                 </div>
             
                 <div class="grupo">
                     <label for="password">Crie sua Senha:</label>
                     <input type="password" id="password" name="password" required>
+                    <div class="erro" id="erro-password"></div>
                 </div>
-             <p class="dica-credenciais"> Crie um ID fácil de lembrar (ex: maria2025). Sua senha deve ter pelo menos 6 caracteres.</p>
-            
             </fieldset>
               <fieldset>
                 <label class="termos">
@@ -167,7 +169,7 @@
 
             <div class='butoes'>
                 <button class = 'cancelar' type="submit" id="botao-cancelar" name="botao-cancelar">Cancelar</button>
-                <button class = 'fazerinscricao' type="submit" id="botao-inscricao" name="botao-inscricao">Fazer Inscrição</button>
+                <button href="mensagem_ confirmacao.html" class = 'fazerinscricao' type="submit" id="botao-inscricao" name="botao-inscricao">Fazer Inscrição</button>
             </div>
 
         </form>

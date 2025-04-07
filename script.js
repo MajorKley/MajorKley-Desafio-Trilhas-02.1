@@ -165,6 +165,37 @@ function validarFormulario() {
         removerErro(trilhasContainer);
     }
 
+    //Validaçao senha e Id
+
+    // 14. Validação do ID e Senha
+    const userIdInput = document.getElementById('userId');
+    const senhaInput = document.getElementById('password');
+
+    const userId = userIdInput.value.trim();
+    const senha = senhaInput.value.trim();
+
+    // Verificação do ID
+    if (userId === '') {
+        mostrarErro(userIdInput, "Por favor, preencha o campo de ID");
+        formularioValido = false;
+    } else if (!/^[a-zA-Z0-9]{6,}$/.test(userId)) {
+        mostrarErro(userIdInput, "O ID deve ter no mínimo 6 caracteres alfanuméricos (sem símbolos)");
+        formularioValido = false;
+    } else {
+        removerErro(userIdInput);
+    }
+
+    // Verificação da senha
+    if (senha === '') {
+        mostrarErro(senhaInput, "Por favor, preencha o campo de senha");
+        formularioValido = false;
+    } else if (!/^(?=.*[A-Za-z])(?=.*\d).{6,}$/.test(senha)) {
+        mostrarErro(senhaInput, "A senha deve ter no mínimo 6 caracteres, incluindo letras e números");
+        formularioValido = false;
+    } else {
+        removerErro(senhaInput);
+    }
+
     // 15. Validação dos Termos
     const termosCheckbox = document.getElementById('termos-checkbox');
     if (!termosCheckbox.checked) {
@@ -190,7 +221,7 @@ function validarFormulario() {
             estado: document.getElementById('estado').value.trim(),
             residenciadocumento: document.getElementById('residenciadocumento').value,
             trilha: document.getElementById('trilha-selecionada').value,
-            termos: document.getElementById('termos-checkbox').checked
+            termos: document.getElementById('termos-checkbox').checked,
         };
     
         // Salva no LocalStorage (como string)
@@ -228,7 +259,6 @@ function removerErro(elemento) {
         erroElement.textContent = '';
     }
 }
-
 // Adiciona evento de clique aos botões das trilhas
 document.querySelectorAll('.trilhavisual').forEach(button => {
     button.addEventListener('click', function(e) {
@@ -252,17 +282,3 @@ document.querySelectorAll('.trilhavisual').forEach(button => {
 });
 
 
-<<<<<<< HEAD
-=======
-// 2. Validação do CPF
-
-
-function gerarIdAutomatico() {
-    const data = Date.now(); // pega o timestamp atual
-    const aleatorio = Math.floor(Math.random() * 1000); // número entre 0 e 999
-    return `user-${data}-${aleatorio}`;
-}
-
-// Atribuir ao campo ID automaticamente
-document.getElementById("userId").value = gerarIdAutomatico();
->>>>>>> a53a8afacd1b7e0d9834c1bb726302994141f423

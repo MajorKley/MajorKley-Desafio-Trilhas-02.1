@@ -101,6 +101,7 @@ legend{
     display: flex;
     flex-direction: column;
     gap: 4px;
+    font-weight: 400;
 }
 
 
@@ -237,11 +238,12 @@ input, select {
 }
 
 .termos{
-
+    
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    width: 100%;       
+    width: 100%;  
+    margin-bottom: 50px;     
 }
 
 .texto-termos{
@@ -527,4 +529,45 @@ input, select {
     color: #555;
     margin-bottom: 10px;
     text-align: left;
+}
+
+
+/*==========Tela de Mensagem de Confirmação=========*/
+
+.mensagem_confirmacao{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgba(33,53,166,1) 0%, rgba(33,53,166,1) 0%, rgba(121,91,223,1) 62%);
+}
+
+.mensagem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+    
+}
+
+.ilustra_mensagem{
+    width: 80%;
+}
+
+.texto-mensagem{
+    
+    font-family: var(--fonte-padrao);
+    color: #e0f7fa;
+    
+}
+
+.login-parabens{
+    text-decoration: none;
+    position: relative;
+}  
+
+.logos_mensagem{
+    margin-top: 50%;
+    width: 200px;
 }
