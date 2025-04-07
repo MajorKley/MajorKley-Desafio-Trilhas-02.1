@@ -252,3 +252,17 @@ document.querySelectorAll('.trilhavisual').forEach(button => {
 });
 
 
+<<<<<<< HEAD
+=======
+// 2. Validação do CPF
+
+
+function gerarIdAutomatico() {
+    const data = Date.now(); // pega o timestamp atual
+    const aleatorio = Math.floor(Math.random() * 1000); // número entre 0 e 999
+    return `user-${data}-${aleatorio}`;
+}
+
+// Atribuir ao campo ID automaticamente
+document.getElementById("userId").value = gerarIdAutomatico();
+>>>>>>> a53a8afacd1b7e0d9834c1bb726302994141f423

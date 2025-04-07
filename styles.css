@@ -482,3 +482,49 @@ input, select {
 }
 
 
+.grupo {
+    margin-bottom: 15px;
+}
+
+.grupo {
+    margin-bottom: 5px;
+}
+
+.grupo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.grupo input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.separador {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.separador {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin: 20px 0;
+    text-align: center;
+}
+.separador {
+    font-size: 14px;  /* Tamanho menor */
+    text-align: left;  /* Alinha à esquerda */
+    margin-left: 0;  /* Garante que fique no canto esquerdo */
+  
+} 
+.dica-credenciais {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: left;
+}
