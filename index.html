@@ -3,180 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscrição - Programa de Tecnologia</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; form-action 'self';">
 </head>
-<body>
-    <div class="formulario">
-        <div class = 'titulos'>
-            <h2>Formulário de Inscrição</h2>
-            <h3>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas</h3>
-        </div>
- 
-        <form id="inscricao-form" novalidate action="mensagem.html" method="POST">
-            <fieldset >
-                <div class= 'grupo'>
-                    <legend>Informações do Participante</legend>
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" autocomplete="name" required>
-                 </div>
-
-                 <div class= 'grupo'>
-                    <label for="aniversario">Data de Nascimento:</label>
-                    <input type="date" id="aniversario" name="aniversario" autocomplete="bday">
-                </div>
-
-                <div class= 'grupo'>
-                    <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" autocomplete="off" required>
-                </div>
-
-                <div class= 'grupo'>
-                    <label for="genero">Gênero:</label>
-                    <select id="genero" name="genero" autocomplete="sex">
-                        <option>Feminino</option>
-                        <option>Masculino</option>
-                        <option>Outro</option>
-                    </select>
-                </div>
-
-                <div class= 'grupo'>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email"  autocomplete="email" required>
-                </div>
-
-                <div class= 'grupo'>
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" autocomplete="tel" required>
-                </div>
-
-                <div class= 'grupo'>
-                    <label for="iddocumento">
-                        Documento de Identidade:
-                        <div class="icone-upload">
-                                <img class='icone'src="icones/cloud-upload.svg" alt="Ícone de upload">
-                                <span class="texto">Clique aqui para<br> selecionar o arquivo</span>
-                                <input type="file" id="iddocumento" name="iddocumento" required>
-                        </div>         
-                    </label>       
-                </div>
-                    
-                
-            </fieldset>
-
-            <fieldset>
-                <legend>Endereço Residencial</legend>
-
-                <div class= 'grupo'>
-                    <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep" autocomplete="postal-code" required>
-                
-                <div class="grupo-diferencial">
-                    <div class= 'grupo-maior'>
-                        <label for="rua">Rua:</label>
-                        <input type="text" id="rua" name="rua" autocomplete="street-address" required>
-                    </div>
-
-                    <div class= 'grupo-menor'>
-                        <label for="numero">Número:</label>
-                        <input type="text" id="numero" name="numero" autocomplete="address-line2" required>
-                    </div>
-                </div>
-
-                <div class="grupo-diferencial">
-                    <div class= 'grupo-maior'>
-                        <label for="cidade">Cidade:</label>
-                        <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required>
-                    </div>
-
-                    <div class= 'grupo-menor'>
-                        <label for="estado">Estado:</label>
-                        <input type="text" id="estado" name="estado" autocomplete="address-level1" required>
-                </div>
-                   
-                </div>
-            </div>
-
-                <div class= 'grupo'>
-                    <label for="residenciadocumento">
-                        Comprovante de Residência:
-                        <div class="icone-upload">
-                                <img class='icone'src="icones/cloud-upload.svg" alt="Ícone de upload">
-                                <span class="texto">Clique aqui para<br> selecionar o arquivo</span>
-                                <input type="file" id="residenciadocumento" name="residenciadocumento" required>
-                        </div>
-                    </label>            
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Trilhas de Aprendizagem</legend>
-                <p class="instrucao">Selecione apenas uma trilha</p>
-                <div class="trilha-icones">
-                    <button class="trilhavisual" data-trilha="front-end" title="Front End">
-                        <img class="img-trilhas" src="icones/front-end.svg" alt="Front End">
-                        <span class="texto">Programação Front-end</span>
-                    </button>
-
-                    <button class="trilhavisual" data-trilha="back-end" title="Back End">
-                        <img class="img-trilhas" src="icones/back-end.svg" alt="Back End">
-                        <span class="texto">Programação Back-end</span>
-                    </button>
-                  
-                    <button class="trilhavisual" data-trilha="jogos" title="Jogos">
-                        <img class="img-trilhas" src="icones/jogos.svg" alt="Jogos">
-                        <span class="texto">Programação de Jogos</span>
-                    </button>
-
-                    <button class="trilhavisual" data-trilha="ux" title="UX">
-                        <img class="img-trilhas" src="icones/ux.svg" alt="UX">
-                        <span class="texto">Design e Experiência</span>
-                    </button>
-
-                    <button class="trilhavisual" data-trilha="dados" title="Dados">
-                        <img class="img-trilhas" src="icones/Frame 48095973.svg" alt="Dados">
-                        <span class="texto">Ciência de Dados</span> 
-                    </button>
-                  
-                </div>
-                <input type="hidden" id="trilha-selecionada" name="trilha-selecionada">
-            </fieldset>
-            
-            <fieldset>
-                <legend>Criação de Conta</legend>
-                <p class="instrucao">Agora, crie sua conta para acessar o sistema:</p>
-                <div class="grupo">
-                    <label for="userId">ID do Usuário:</label>
-                    <p class="dica-credenciais"> Crie um ID fácil de lembrar (ex: maria2025). Sua senha deve ter pelo menos 6 caracteres.</p>
-                    <input type="text" id="userId" name="userId" required>
-                    <div class="erro" id="erro-userId"></div>
-                </div>
-            
-                <div class="grupo">
-                    <label for="password">Crie sua Senha:</label>
-                    <input type="password" id="password" name="password" required>
-                    <div class="erro" id="erro-password"></div>
-                </div>
-            </fieldset>
-              <fieldset>
-                <label class="termos">
-                    <input type="checkbox" required id="termos-checkbox" name="termos-checkbox" autocomplete="off" required>
-                    <div class="texto-termos">
-                        Declaro que li e concordo com os <span class="ok"> Termos e Condições </span> e com a <span class="ok">Política de Privacidade.</span>
-                    </div>  
-                </label>     
-            </fieldset>
-
-            <div class='butoes'>
-                <button class = 'cancelar' type="button" id="botao-cancelar" name="botao-cancelar">Cancelar</button>
-                <button class = 'fazerinscricao' type="submit" id="botao-inscricao" name="botao-inscricao">Fazer Inscrição</button>
-            </div>
-
-        </form>
+<body class="tela_login">
+    <div class="parteSuperior">
+        <img class="faixa" src="elementos_login/elemento_decorativo_faixa.svg" alt="faixa_trilhas">
+        <img class="logo_trilhas" src="elementos_login/logo_trilhas.svg" alt="logo_trilhas">
+        <img class="faixa_inferior" src="elementos_login/elemento_decorativo_faixa_inferior.svg" alt="faixa_trilhas_inferior">
+        
     </div>
-   
-    <script src="script.js"></script>
+    <div class="parteInferior">
+        <div class="login_corpo_superior">
+            <h1 class="welcome">Seja Bem Vindo, Trilheiro!</h1>
+            <h2 class="welcome-sub">Estamos muito felizes por você estar aqui.</h2>
+        </div>
+        <div class="login_corpo">
+            <div class="inputs">
+                <div class='nomes_inputs'>
+                    <label for="email">Email ou ID:</label>
+                    <input type="text" id="email" name="email" >
+                </div>
+                <div class='nomes_inputs'>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" autocomplete="current-password">
+                </div>
+            </div>
+            <div class="infos_adicionais">
+                <label class="conexao">
+                <input type="checkbox"  id="manter-conectado" required> Manter-me conectado</label>
+                <h2 class="esquecer_senha">Esqueceu sua senha?</h2>
+            </div>
+        </div>
+        <div class="login_corpo_inferior">
+            <button class='buton_entrar' type="button">Entrar</button>
+            <h2 class="registrar-se">Ainda não tem uma conta? 
+                <a href="formulario.html" class="registro_link">Registre-se</a>
+            </h2>
+        </div>
+    </div> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="login.js"></script>
     
 </body>
 </html>

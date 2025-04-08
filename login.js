@@ -11,7 +11,7 @@ document.querySelector('.buton_entrar').addEventListener('click', function(e) {
         Swal.fire({
             icon: 'error',
             title: 'Conta não encontrada',
-            html: 'Nenhum usuário cadastrado. <a href="index.html" style="color: #E43A12; font-weight: bold;">Clique aqui</a> para se cadastrar.',
+            html: 'Nenhum usuário cadastrado. <a href="formulario.html" style="color: #E43A12; font-weight: bold;">Clique aqui</a> para se cadastrar.',
             confirmButtonColor: '#292524',
             confirmButtonText: 'Entendido',
             backdrop: `
