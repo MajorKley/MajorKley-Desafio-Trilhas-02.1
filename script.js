@@ -221,18 +221,16 @@ function validarFormulario() {
             estado: document.getElementById('estado').value.trim(),
             residenciadocumento: document.getElementById('residenciadocumento').value,
             trilha: document.getElementById('trilha-selecionada').value,
+            userId: document.getElementById('userId').value.trim(),
+            password: document.getElementById('password').value.trim(),
             termos: document.getElementById('termos-checkbox').checked,
         };
     
         // Salva no LocalStorage (como string)
-        localStorage.setItem('dadosInscricao', JSON.stringify(dadosFormulario));
+        localStorage.setItem('usuarioCadastrado', JSON.stringify(dadosFormulario));
     
-    }
+        window.location.href = 'mensagem.html';
 
-    // Se tudo estiver válido
-    if (formularioValido) {
-        alert('Formulário válido! Pronto para enviar.');
-        // document.getElementById('inscricao-form').submit(); // Descomente para enviar
     }
 }
 

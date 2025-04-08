@@ -12,27 +12,15 @@
     border: 0;
 }
 
-body{
-    display: flex;  
-
-}
-
 /*======PÁGINA FORMULÁRIO=======*/
-
-.visual-direita{
-
-    position:fixed;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100vh;
-    overflow: visible;
-    background: linear-gradient(45deg, rgba(33,53,166,1) 0%, rgba(33,53,166,1) 0%, rgba(121,91,223,1) 62%);
-    display: flex;  
-    flex-direction: column;
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 140px 68px 90px;
-    gap: 70px;
+    background: linear-gradient(45deg, rgba(33,53,166,1) 0%, rgba(33,53,166,1) 0%, rgba(121,91,223,1) 62%);
 }
 
 .logos{
@@ -418,6 +406,7 @@ input, select {
     background-color: #785ADE;
     box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
     color: #E7E5E4;
+    position: relative;
 
 }
 
@@ -427,19 +416,24 @@ input, select {
 
 }
 @media (max-width: 768px) {
-    body {
+    .mensagem {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    .visual-direita {
-        position: relative;
-        width: 100%;
-        height: auto;
-        order: -1; /* Faz com que a imagem vá para cima */
 
+    .extras-mensagem-ilustra {
+        order: -1; /* Faz a ilustração ir para cima */
+        margin-bottom: 16px;
     }
-    .formulario {
-        width: 100%;
-        padding: 16px;
+
+    .texto-mensagem {
+        padding: 0 16px;
+    }
+
+    .ilustra_mensagem {
+        width: 80%;
+        max-width: 300px;
     }
 }
 
@@ -544,9 +538,13 @@ input, select {
 }
 
 .mensagem{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px; /* Espaço entre a imagem e o texto */
+    
+    
    
     
 }
@@ -571,3 +569,17 @@ input, select {
     margin-top: 50%;
     width: 200px;
 }
+
+/*====== extras ======*/
+
+.swal2-popup {
+    font-family: var(--fonte-padrao);
+    border-radius: 8px !important;
+}
+
+.swal2-confirm {
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+}
+
+

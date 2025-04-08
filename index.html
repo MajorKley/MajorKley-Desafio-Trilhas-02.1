@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição - Programa de Tecnologia</title>
     <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; form-action 'self';">
 </head>
 <body>
     <div class="formulario">
@@ -13,7 +14,7 @@
             <h3>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas</h3>
         </div>
  
-        <form id="inscricao-form" novalidate>
+        <form id="inscricao-form" novalidate action="mensagem.html" method="POST">
             <fieldset >
                 <div class= 'grupo'>
                     <legend>Informações do Participante</legend>
@@ -168,19 +169,14 @@
             </fieldset>
 
             <div class='butoes'>
-                <button class = 'cancelar' type="submit" id="botao-cancelar" name="botao-cancelar">Cancelar</button>
-                <button href="mensagem_ confirmacao.html" class = 'fazerinscricao' type="submit" id="botao-inscricao" name="botao-inscricao">Fazer Inscrição</button>
+                <button class = 'cancelar' type="button" id="botao-cancelar" name="botao-cancelar">Cancelar</button>
+                <button class = 'fazerinscricao' type="submit" id="botao-inscricao" name="botao-inscricao">Fazer Inscrição</button>
             </div>
 
         </form>
     </div>
-    <div class="visual-direita">
-        <img class="background" src="background/Ilustration.svg" alt="ilustracao">
-        <img class='logos' src="background/trilhaslogo.svg" alt="marca">
-    </div>
-
+   
     <script src="script.js"></script>
-       
     
 </body>
 </html>
