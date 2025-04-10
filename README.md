@@ -32,6 +32,15 @@ A proposta é oferecer uma **plataforma mais interativa, responsiva e intuitiva*
 ✅ Estrutura leve e fácil de integrar com sistemas futuros.
 
 
+🚀 **COMO RODAR LOCALMENTE:**
+
+Faça o download do repositório como .zip no GitHub.
+
+Extraia o conteúdo do arquivo.
+Abra o arquivo index.html no navegador.
+
+
+
 
 
 🌐 **REDES SOCIAIS**
@@ -49,5 +58,5 @@ Conecte-se com a gente:
 
 💼 LinkedIn:www.linkedin.com/in/jennyfer-cruz-viana-253057326
 
-🐙 GitHub: hgithub.com/jennyviana
+🐙 GitHub: https://github.com/jennyviana
 
